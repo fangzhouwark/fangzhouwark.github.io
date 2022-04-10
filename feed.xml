@@ -1,1 +1,246 @@
-<feed xmlns="http://www.w3.org/2005/Atom"> <id>https://fangzhouwark.github.io/</id><title>Chirpy</title><subtitle>A minimal, responsive, and powerful Jekyll theme for presenting professional writing.</subtitle> <updated>2022-04-10T18:44:45+08:00</updated> <author> <name>your_full_name</name> <uri>https://fangzhouwark.github.io/</uri> </author><link rel="self" type="application/atom+xml" href="https://fangzhouwark.github.io/feed.xml"/><link rel="alternate" type="text/html" hreflang="en" href="https://fangzhouwark.github.io/"/> <generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator> <rights> © 2022 your_full_name </rights> <icon>/assets/img/favicons/favicon.ico</icon> <logo>/assets/img/favicons/favicon-96x96.png</logo> </feed>
+
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>http://localhost:4000/</id>
+  <title>Wark(吴方舟)</title>
+  <subtitle>A minimal, responsive, and powerful Jekyll theme for presenting professional writing.</subtitle>
+  <updated>2022-04-10T16:44:21+08:00</updated>
+  <author>
+    <name>wark</name>
+    <uri>http://localhost:4000/</uri>
+  </author>
+  <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml"/>
+  <link rel="alternate" type="text/html" hreflang="zh"
+    href="http://localhost:4000/"/>
+  <generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator>
+  <rights> © 2022 wark </rights>
+  <icon>/assets/img/favicons/favicon.ico</icon>
+  <logo>/assets/img/favicons/favicon-96x96.png</logo>
+
+
+  
+  <entry>
+    <title>个人特征信息</title>
+    <link href="http://localhost:4000/posts/personal/" rel="alternate" type="text/html" title="个人特征信息" />
+    <published>2022-04-08T14:10:00+08:00</published>
+  
+    <updated>2022-04-08T14:10:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/personal/</id>
+    <content src="http://localhost:4000/posts/personal/" />
+    <author>
+      <name>cotes</name>
+    </author>
+
+  
+    
+    <category term="introduction" />
+    
+    <category term="personal info" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      身高 &amp;amp; 体重
+
+  身高： 178 CM
+  体重： 70 KG
+
+
+出生日期
+生于2001年11月8日。今年20岁，属蛇。
+籍贯
+湖北武汉
+教育经历
+华中科技大学 网络空间安全学院 B.E.网络空间安全         
+2019年-至今
+
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>我的爱好</title>
+    <link href="http://localhost:4000/posts/my-hobbies/" rel="alternate" type="text/html" title="我的爱好" />
+    <published>2022-04-08T11:33:00+08:00</published>
+  
+    <updated>2022-04-08T11:33:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/my-hobbies/</id>
+    <content src="http://localhost:4000/posts/my-hobbies/" />
+    <author>
+      <name>cotes</name>
+    </author>
+
+  
+    
+    <category term="introduction" />
+    
+    <category term="hobby" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      生活日常爱好
+  在平时，我喜欢合唱。我经常参加合唱训练。在大一的时候加入了学院的合唱团，曾经在红歌会上合唱《我爱你中国》，以下是合唱时候的照片：
+
+Rank
+
+娱乐爱好
+  我平时在学习之余还喜欢玩英雄联盟这一款Moba游戏，能够较好的释放我的压力。这是我在过去的赛季中取得的段位：
+
+Rank
+
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>后量子安全的邮件系统</title>
+    <link href="http://localhost:4000/posts/customize-the-favicon/" rel="alternate" type="text/html" title="后量子安全的邮件系统" />
+    <published>2022-04-02T00:34:00+08:00</published>
+  
+    <updated>2022-04-02T00:34:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/customize-the-favicon/</id>
+    <content src="http://localhost:4000/posts/customize-the-favicon/" />
+    <author>
+      <name>wark</name>
+    </author>
+
+  
+    
+    <category term="introduction" />
+    
+    <category term="work" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      在2021年暑假，我们团队提出了一种基于身份认证的格密码安全邮件收发系统——后量子安全邮件系统。该系统能够实现使用后量子 PGP 协议（postQuantum PGP 简称为 postPGP）对邮件进行加密与认证。
+系统主要由以下三部分组成，如下图所示：
+
+后量子安全邮件系统结构
+
+  邮件客户端前台
+  邮件客户端后台
+  密钥生成中心
+
+
+在邮件系统收发邮件前，postPGP 进程将会与密钥生成中心进行通信，申请获取当前工作邮箱的公私密钥对，该密钥对将用于加密邮件内容。密钥生成中心将会根据用户的身份 𝑖𝑑 生成合法的个人私钥，并联通主公钥一同发送回postPGP进程，具体细节将在第 5 节中详细介绍。postPGP 进程会将接收到的密钥对保存在本地，以供邮件加解密使用。
+
+在发送邮件时，用户可以选择是否使用加密发送以及使用何种加密方式，目前本邮件系统提供使用 postPGP 的...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>我喜欢吃的:)</title>
+    <link href="http://localhost:4000/posts/getting-started/" rel="alternate" type="text/html" title="我喜欢吃的:)" />
+    <published>2022-04-01T20:55:00+08:00</published>
+  
+    <updated>2022-04-01T20:55:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/getting-started/</id>
+    <content src="http://localhost:4000/posts/getting-started/" />
+    <author>
+      <name>wark</name>
+    </author>
+
+  
+    
+    <category term="introduction" />
+    
+    <category term="food" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      热干面
+  众所周知，热干面是武汉特色的美式，做为一个土生土长的武汉人，我从小就开始吃热干面，并且十分的喜欢它。
+起源
+  热干面源于三十年代初期，汉口长堤街卖汤面的蔡明伟。蔡明伟是黄陂蔡榨人，他的汤面做得非常受欢迎，客人经常排队要等很长时间才能买到，很多客人等不及走掉了，蔡明伟做生意很会动脑筋。为了加快出货量，通过反复试验，他终于摸索出一套“掸面”的工艺——就是先把面煮七八成熟，然后快速降温并均匀抹上油，这样卖面时，出货量就快了。有一次蔡明伟在长堤街看到一家麻油作坊，看见他们从芝麻中提取麻油后，芝麻酱闲弃在一边，香气扑鼻，他灵机一动；何不将芝麻酱加进面里试一下呢，于是蔡明伟向麻油作坊老板购买了些许芝麻酱回家。同样经过多次反复试验，他觉得满意了，身边的人都说好吃，这时候他才信心满满推出他的新产品上街叫卖。热干面——这个武汉人民最爱的小吃就这样诞生了。此时蔡明伟给这个面起了个名叫“麻酱...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>我喜欢的文章</title>
+    <link href="http://localhost:4000/posts/enable-google-pv/" rel="alternate" type="text/html" title="我喜欢的文章" />
+    <published>2022-03-29T07:32:00+08:00</published>
+  
+    <updated>2022-03-29T07:32:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/enable-google-pv/</id>
+    <content src="http://localhost:4000/posts/enable-google-pv/" />
+    <author>
+      <name>wark</name>
+    </author>
+
+  
+    
+    <category term="Blog" />
+    
+    <category term="article" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      Run through the rain
+
+雨中的记忆
+
+She had been shopping with her Mom in Wal-Mart. She must have been 6 years old, this beautiful brown haired, freckle-faced image of innocence. It was pouring outside. The kind of rain that gushes over the top of rain gutters, so much in a hurry to hit the Earth, it has no time to flow down the spout.
+
+她和妈妈刚在沃尔玛结束购物。这个天真的小女孩应该6岁大了，头发是美丽的棕色，脸上有雀斑。外面下着倾盆大雨。雨水溢满了檐槽，来不及排...
+    </summary>
+  
+
+  </entry>
+
+</feed>
+
+
